@@ -3,13 +3,13 @@
 :root {
   --color-main: #232223;
   --color-main-light: #e1f6fb;
-  --color-dark: #272828;
+  --color-dark: #333636;
   --color-dark-medium: rgb(93, 93, 91);
   --color-dark-light: #a7a199;
   --color-light: #e5e5e5;
   --color-gray: #8b8b8b;
   --color-light-gray: #b2bdbd;
-  --color-bg: #2a2c2d;
+  --color-bg: #313334;
   --color-success: #5dd693;
   --color-error: #fc4b0b;
 }
@@ -664,6 +664,7 @@ font-size: 3em;
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: var(--color-main-light);
 }
 
 .roomListRoom__actions {
@@ -773,12 +774,16 @@ font-size: 3em;
 
 .activities__boxContent {
   margin-left: 4.2rem;
+  color: var(--color-main-light);
 }
 
 .activities__boxContent {
   font-size: 1.4rem;
+  color: var(--color-main-light);
 }
-
+.activities__boxContent a{
+  color: var(--color-main-light);
+}
 .activities__boxContent a:hover {
   text-decoration: underline;
 }
@@ -912,6 +917,10 @@ font-size: 3em;
   border-radius: 0.7rem;
   overflow: hidden;
   position: relative;
+  color: var(--color-main-light);
+}
+.participants{
+  color: white;
 }
 
 @media screen and (max-width: 900px) {

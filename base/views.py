@@ -15,8 +15,7 @@ rooms = [
     {'id': 3, 'name': 'Frontend developer'},
 ]
 '''
-def intro(request):
-    return render(request,'base/intro.html')
+
 
 def loginpage(request):
     page ='login'
