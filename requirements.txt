@@ -90,7 +90,7 @@ python-dateutil==2.8.2
 python-docx==0.8.11
 pyttsx3==2.90
 pytz==2023.3
-PyWavelets==1.4.1
+PyWavelets==1.4.0
 ravenclaw==2020.11.12
 rdflib==6.3.2
 regex==2023.6.3
