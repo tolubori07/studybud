@@ -111,8 +111,8 @@ stack-data==0.6.2
 tabula-py==2.6.0
 tensorboard==2.11.2
 tensorboard-data-server==0.7.1
-tensorflow==2.13.0
-tensorflow-estimator==2.13.0
+tensorflow==2.11.0
+tensorflow-estimator==2.11.0
 tensorflow-io-gcs-filesystem==0.32.0
 termcolor==2.3.0
 tifffile==2023.7.4
