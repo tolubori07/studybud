@@ -3,7 +3,7 @@
     <div class="container">
       <a href="{%url 'home'%}" class="header__logo">
         <img src="{% static 'images/logo.svg' %}" />
-        <h1>StudyBuddy</h1>
+        <h1 >Code-0</h1>
       </a>
       <form class="header__search" method="GET" action="{% url 'home'%}?q={{topic.name}}">
         <label>
@@ -24,7 +24,7 @@
         <div class="header__user">
           <a href="{% url 'userprofile' user.id%}">
             <div class="avatar avatar--medium active">
-              <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              <img src="{{request.user.avatar.url}}"/>
             </div>
             <p>{{request.user.username}} <span>@{{request.user.username}}</span></p>
           </a>

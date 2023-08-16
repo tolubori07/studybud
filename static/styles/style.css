@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 :root {
-  --color-main: #71c6dd;
+  --color-main: #232223;
   --color-main-light: #e1f6fb;
-  --color-dark: #3f4156;
-  --color-dark-medium: #51546e;
-  --color-dark-light: #696d97;
+  --color-dark: #272828;
+  --color-dark-medium: rgb(93, 93, 91);
+  --color-dark-light: #a7a199;
   --color-light: #e5e5e5;
   --color-gray: #8b8b8b;
   --color-light-gray: #b2bdbd;
-  --color-bg: #2d2d39;
+  --color-bg: #2a2c2d;
   --color-success: #5dd693;
   --color-error: #fc4b0b;
 }
@@ -17,8 +17,7 @@
 /*========== base styles ==========*/
 
 * {
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: comfortaa;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -68,7 +67,13 @@ a {
   width: 90%;
   margin: auto;
 }
-
+h1{
+  color: #696d97;
+  text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+color: #202c2d;
+font-family: vcr osd mono;
+font-size: 3em;
+}
 .btn {
   background-color: transparent;
   border: none;
@@ -96,7 +101,7 @@ a {
 
 .btn--main {
   background-color: var(--color-main);
-  color: var(--color-dark);
+  color: var(--color-light);
 }
 
 .btn:hover {
@@ -268,6 +273,7 @@ a {
 .header {
   padding: 1.5rem;
   background-color: var(--color-dark);
+  font-size: large;
 }
 
 .header > .container {
@@ -294,7 +300,7 @@ a {
 }
 
 .header__search > label {
-  background-color: var(--color-dark-medium);
+  background-color: #6E6362;
   padding: 1.3rem 1rem;
   display: flex;
   align-items: center;
@@ -362,7 +368,7 @@ a {
 }
 
 .header__menu span {
-  color: var(--color-main);
+  color: var(--color-light-gray);
   font-weight: 500;
   font-size: 1.4rem;
   display: block;
@@ -581,7 +587,7 @@ a {
 
 .topics__list li a.active,
 .topics__list li a:hover {
-  color: var(--color-main);
+  color: var(--color-main-light);
 }
 
 .topics__list li a span {
@@ -737,7 +743,7 @@ a {
 }
 
 .activities__header h2 {
-  background-color: var(--color-dark-light);
+  background-color: var(--color-dark);
   text-transform: uppercase;
   font-weight: 500;
   padding: 1rem 1.5rem;
@@ -751,6 +757,7 @@ a {
   padding: 1.5rem;
   border: 2px solid var(--color-dark-medium);
   border-radius: 5px;
+  
 }
 
 .activities__boxHeader p {
@@ -919,7 +926,7 @@ a {
 
 .room__top,
 .participants__top {
-  background: var(--color-dark-light);
+  background: var(--color-main);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1008,12 +1015,12 @@ a {
 .room__info h3 {
   font-size: 2.4rem;
   font-weight: 500;
-  color: var(--color-main);
+  color: var(--color-main-light);
 }
 
 .room__hosted p {
   text-transform: uppercase;
-  color: var(--color-gray);
+  color: var(--color-light);
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 2;
@@ -1025,6 +1032,7 @@ a {
   align-items: center;
   margin-bottom: 1rem;
   transition: all 0.3s ease-in-out;
+  color: var(--color-light);
 }
 
 .room__author:hover {
@@ -1033,7 +1041,7 @@ a {
 
 .room__topics {
   padding: 0.5rem 1.5rem;
-  background: var(--color-dark-light);
+  background: var(--color-main);
   color: var(--color-light);
   display: inline-block;
   font-size: 1.4rem;
@@ -1109,7 +1117,7 @@ a {
 
 .room__message > form > input {
   resize: none;
-  background-color: var(--color-dark-light);
+  background-color: var(--color-main);
   color: var(--color-light);
   border: none;
   outline: none;
