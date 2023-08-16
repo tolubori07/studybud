@@ -108,7 +108,7 @@ soupsieve==2.4.1
 SPARQLWrapper==2.0.0
 sqlparse==0.4.4
 stack-data==0.6.2
-tabula-py==2.7.0
+tabula-py==2.6.0
 tensorboard==2.13.0
 tensorboard-data-server==0.7.1
 tensorflow==2.13.0
