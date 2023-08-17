@@ -17,6 +17,11 @@
   font-family: comfortaa;
   src: url(Comfortaa-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: vcr osd mono;
+  src: url(VCR_OSD_MONO_1.001.ttf);
+}
+
 /*========== base styles ==========*/
 
 * {
