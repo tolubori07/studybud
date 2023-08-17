@@ -9,11 +9,14 @@
   --color-light: #e5e5e5;
   --color-gray: #8b8b8b;
   --color-light-gray: #b2bdbd;
-  --color-bg: #313334;
+  --color-bg: #8f9294;
   --color-success: #5dd693;
   --color-error: #fc4b0b;
 }
-
+@font-face {
+  font-family: myFirstFont;
+  src: url(Comfortaa-VariableFont_wght.ttf);
+}
 /*========== base styles ==========*/
 
 * {
