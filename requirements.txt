@@ -88,7 +88,6 @@ Pygments==2.15.1
 pyparsing==3.0.9
 python-dateutil==2.8.2
 python-docx==0.8.11
-python-dotenv==0.21.0
 pyttsx3==2.90
 pytz==2023.3
 PyWavelets==1.4.1
@@ -104,7 +103,7 @@ selectivesearch==0.4
 Send2Trash==1.8.2
 silverware==2020.11.12
 six==1.16.0
-scikit-learn==1.0.2
+sklearn==0.0.post5
 slytherin==2020.11.12
 soupsieve==2.4.1
 SPARQLWrapper==2.0.0
