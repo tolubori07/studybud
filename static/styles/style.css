@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 :root {
-  --color-main: #232223;
+  --color-main: #302f30;
   --color-main-light: #e1f6fb;
-  --color-dark: #333636;
+  --color-dark: #353838;
   --color-dark-medium: rgb(93, 93, 91);
   --color-dark-light: #a7a199;
-  --color-light: #e5e5e5;
+  --color-light: white;
   --color-gray: #8b8b8b;
-  --color-light-gray: #b2bdbd;
+  --color-light-gray: white;
   --color-bg: #8f9294;
   --color-success: #5dd693;
   --color-error: #fc4b0b;
+  --color-prinary: #370eee;
 }
 @font-face {
   font-family: comfortaa;
@@ -37,7 +38,9 @@
 html {
   font-size: 56.25%;
 }
-
+.btn{
+  background-color: var(--color-prinary);
+}
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 62.5%;
@@ -75,12 +78,15 @@ a {
   width: 90%;
   margin: auto;
 }
-h1{
+h1 {
   color: #696d97;
-  text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
-color: #202c2d;
-font-family: vcr osd mono;
-font-size: 3em;
+  text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5,
+    -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5,
+    -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5,
+    -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+  color: #202c2d;
+  font-family: vcr osd mono;
+  font-size: 3em;
 }
 .btn {
   background-color: transparent;
@@ -308,7 +314,7 @@ font-size: 3em;
 }
 
 .header__search > label {
-  background-color: #6E6362;
+  background-color: #6e6362;
   padding: 1.3rem 1rem;
   display: flex;
   align-items: center;
@@ -638,6 +644,7 @@ font-size: 3em;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2.4rem;
+  color: white;
 }
 
 .roomList__header h2 {
@@ -649,7 +656,7 @@ font-size: 3em;
 
 .roomList__header p {
   font-weight: 500;
-  color: var(--color-dark-light);
+  color: var(--color-light);
 }
 
 /*========== Room List Room ==========*/
@@ -766,7 +773,6 @@ font-size: 3em;
   padding: 1.5rem;
   border: 2px solid var(--color-dark-medium);
   border-radius: 5px;
-  
 }
 
 .activities__boxHeader p {
@@ -789,7 +795,7 @@ font-size: 3em;
   font-size: 1.4rem;
   color: var(--color-main-light);
 }
-.activities__boxContent a{
+.activities__boxContent a {
   color: var(--color-main-light);
 }
 .activities__boxContent a:hover {
@@ -927,7 +933,7 @@ font-size: 3em;
   position: relative;
   color: var(--color-main-light);
 }
-.participants{
+.participants {
   color: white;
 }
 
@@ -1058,7 +1064,7 @@ font-size: 3em;
 
 .room__topics {
   padding: 0.5rem 1.5rem;
-  background: var(--color-main);
+  background: var(--color-prinary);
   color: var(--color-light);
   display: inline-block;
   font-size: 1.4rem;
@@ -1153,7 +1159,7 @@ font-size: 3em;
 }
 
 .participants__top span {
-  color: var(--color-main);
+  color: var(--color-prinary);
   font-size: 1.3rem;
   text-transform: none;
 }
