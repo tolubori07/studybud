@@ -12,7 +12,7 @@
   --color-bg: #8f9294;
   --color-success: #5dd693;
   --color-error: #fc4b0b;
-  --color-prinary: #370eee;
+  --color-prinary: color-mix(in rgb, #81A4CD 50%, grey);
 }
 @font-face {
   font-family: comfortaa;
@@ -39,7 +39,7 @@ html {
   font-size: 56.25%;
 }
 .btn{
-  background-color: var(--color-prinary);
+  background-color: var(--color-prinary) !important;
 }
 @media only screen and (min-width: 1200px) {
   html {
@@ -89,7 +89,7 @@ h1 {
   font-size: 3em;
 }
 .btn {
-  background-color: transparent;
+  background-color: var(--color-prinary) !important;
   border: none;
   display: inline-flex;
   align-items: center;
@@ -107,6 +107,7 @@ h1 {
   padding: 0;
   color: var(--color-main);
   box-shadow: none;
+  background-color: var(--color-prinary);
 }
 
 .btn--link:hover {
@@ -114,7 +115,7 @@ h1 {
 }
 
 .btn--main {
-  background-color: var(--color-main);
+  background-color: var(--color-prinary);
   color: var(--color-light);
 }
 
@@ -138,13 +139,13 @@ h1 {
   font-size: 1.4rem;
   font-weight: 700;
   padding: 6px 2.5rem;
-  color: var(--color-main);
-  background: transparent;
-  border: 2px solid var(--color-main);
+  color: var(--color-main-light);
+  background: var(--color-prinary);
+  border: 2px solid var(--color-prinary);
 }
 
 .action-button {
-  background: transparent;
+  background: var(--color-prinary);
   border: none;
   outline: none;
   cursor: pointer;
@@ -154,7 +155,7 @@ h1 {
   position: relative;
   display: inline-block;
   border-radius: 50%;
-  border: 2px solid var(--color-main);
+  border: 2px solid var(--color-prinary);
 }
 
 .avatar img {
@@ -232,7 +233,7 @@ h1 {
   position: absolute;
   top: 5rem;
   right: 0.5rem;
-  background: var(--color-dark-light);
+  background: var(--color-prinary);
   border-radius: 5px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -252,7 +253,7 @@ h1 {
 }
 
 .dropdown-menu a:hover {
-  background-color: var(--color-dark-medium);
+  background-color: var(--color-prinary);
 }
 
 .dropdown-menu > a:not(:last-child) {
@@ -314,7 +315,7 @@ h1 {
 }
 
 .header__search > label {
-  background-color: #6e6362;
+  background-color: var(--color-dark);
   padding: 1.3rem 1rem;
   display: flex;
   align-items: center;
@@ -331,7 +332,7 @@ h1 {
 
 .header__search input {
   width: 30rem;
-  background: transparent;
+  background: var(--color-dark);
   border: none;
   outline: none;
   color: var(--color-light);
@@ -382,7 +383,7 @@ h1 {
 }
 
 .header__menu span {
-  color: var(--color-light-gray);
+  color: var(--color-prinary);
   font-weight: 500;
   font-size: 1.4rem;
   display: block;
@@ -518,7 +519,7 @@ h1 {
 .form__group textarea,
 .form__group select {
   background: transparent;
-  border: 1px solid var(--color-dark-light);
+  border: 1px solid var(--color-prinary);
   padding: 1rem;
   border-radius: 3px;
   width: 100%;
@@ -544,7 +545,7 @@ h1 {
 }
 
 .form__group select option {
-  background-color: var(--color-dark-light);
+  background-color: var(--color-prinary);
   color: var(--color-light);
   padding: 0 10rem;
 }
@@ -564,7 +565,7 @@ h1 {
   text-align: center;
   font-size: 1.8rem;
   font-weight: 500;
-  color: var(--color-main);
+  color: white;
   cursor: pointer;
 }
 
@@ -583,7 +584,7 @@ h1 {
 .topics__header h2 {
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--color-dark-light);
+  color: white;
 }
 
 .topics__list {
@@ -606,7 +607,7 @@ h1 {
 
 .topics__list li a span {
   padding: 0.5rem 1rem;
-  background-color: var(--color-dark);
+  background-color: var(--color-prinary);
   border-radius: 3px;
   font-size: 1.3rem;
   font-weight: 700;
@@ -709,12 +710,12 @@ h1 {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
-  color: var(--color-light);
+  color: #cec3c3;
   transition: all 0.3s ease-in-out;
 }
 
 .roomListRoom__content a:hover {
-  color: var(--color-main);
+  color: white;
 }
 
 .roomListRoom__meta {
@@ -742,7 +743,7 @@ h1 {
 
 .roomListRoom__topic {
   padding: 5px 1.5rem;
-  background-color: var(--color-dark-medium);
+  background-color: var(--color-prinary);
   border-radius: 5rem;
   font-weight: 500;
   font-size: 1.3rem;
@@ -759,7 +760,7 @@ h1 {
 }
 
 .activities__header h2 {
-  background-color: var(--color-dark);
+  background-color: var(--color-prinary);
   text-transform: uppercase;
   font-weight: 500;
   padding: 1rem 1.5rem;
@@ -803,7 +804,7 @@ h1 {
 }
 
 .activities__boxRoomContent {
-  background: var(--color-bg);
+  background: var(--color-prinary);
   padding: 1rem;
   border-radius: 5px;
   margin-top: 1rem;
@@ -897,7 +898,7 @@ h1 {
 }
 
 .profile__info p {
-  color: var(--color-main);
+  color: var(--color-prinary);
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -908,7 +909,7 @@ h1 {
 
 .profile__about h3 {
   text-transform: uppercase;
-  color: var(--color-dark-light);
+  color: var(--color-main-light);
   margin-bottom: 0.5rem;
 }
 
@@ -917,7 +918,7 @@ h1 {
 }
 
 .profile-page .roomList__header h2 {
-  color: var(--color-dark-light);
+  color: var(--color-light);
 }
 
 /*==============================
@@ -1094,7 +1095,7 @@ h1 {
 }
 
 .thread {
-  border-left: 2px solid var(--color-dark);
+  border-left: 2px solid var(--color-prinary);
   padding-left: 1rem;
   margin: 2rem 0;
   padding: 2rem;
@@ -1191,6 +1192,6 @@ h1 {
 .participant span {
   display: block;
   font-weight: 500;
-  color: var(--color-main);
+  color: var(--color-prinary);
   font-weight: 1.4rem;
 }
