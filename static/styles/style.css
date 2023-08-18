@@ -12,7 +12,7 @@
   --color-bg: #8f9294;
   --color-success: #5dd693;
   --color-error: #fc4b0b;
-  --color-prinary: color-mix(in rgb, #81A4CD 50%, grey);
+  --color-prinary:  #81A4CD;
 }
 @font-face {
   font-family: comfortaa;
