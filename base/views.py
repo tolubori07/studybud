@@ -6,6 +6,7 @@ from django.db.models import Q
 from django.contrib.auth import authenticate,login,logout
 from.models import Room,Topic,Message,User
 from.forms import RoomForm, userform,Myusercreationform
+from .utils import get_random_activity
 
 
 '''
@@ -72,7 +73,7 @@ def home(request):
     return render(request, 'base/home.html', context)
 
 
-
+@login_required(login_url='login')
 def room(request,pk):
     room = Room.objects.get(id=pk)
     room_messages = room.message_set.all()
@@ -188,3 +189,7 @@ def topicpage(request):
 def activitiespage(request):
     room_messages = Message.objects.all()
     return render(request,'base/activity.html',{'room_messages': room_messages})
+
+def custom_404(request, exception):
+    activity = get_random_activity()
+    return render(request, '404.html', {'activity': activity}, status=404)
