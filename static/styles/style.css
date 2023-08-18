@@ -315,7 +315,7 @@ h1 {
 }
 
 .header__search > label {
-  background-color: var(--color-dark);
+  background-color: var(--color-gray);
   padding: 1.3rem 1rem;
   display: flex;
   align-items: center;
@@ -332,7 +332,7 @@ h1 {
 
 .header__search input {
   width: 30rem;
-  background: var(--color-dark);
+  background: var(--color-gray);
   border: none;
   outline: none;
   color: var(--color-light);
@@ -459,7 +459,7 @@ h1 {
 .layout__boxHeader {
   display: flex;
   padding: 1.5rem;
-  background-color: var(--color-dark-light);
+  background-color: var(--color-prinary);
 }
 
 .layout__boxTitle {
@@ -526,6 +526,9 @@ h1 {
   color: var(--color-light);
   font-weight: 500;
   outline: none;
+}
+.form__group a{
+  color: var(--color-main-light);
 }
 
 .form__group input:focus,
@@ -1123,7 +1126,9 @@ h1 {
   align-items: center;
   gap: 1rem;
 }
-
+.thread__authorInfo span{
+  color: var(--color-prinary);
+}
 .thread__details {
   font-size: 1.4rem;
   margin-top: 0.5rem;
