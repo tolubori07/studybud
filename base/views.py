@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate,login,logout
 from.models import Room,Topic,Message,User
 from.forms import RoomForm, userform,Myusercreationform
 from .utils import get_random_activity
-
+from django.template import RequestContext
 
 '''
 rooms = [
