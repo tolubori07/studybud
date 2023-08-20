@@ -1200,3 +1200,9 @@ h1 {
   color: var(--color-prinary);
   font-weight: 1.4rem;
 }
+
+.main--404{
+  background-color: var(--color-bg);
+  color: var(--color-light);
+  font-family: comfortaa;
+}

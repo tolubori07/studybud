@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Page Not Found</title>
-</head>
-<body>
-    <h1>Oops! Page Not Found</h1>
+{% extends 'main.html'%} {% block content %}
+<main class="main--404">
+    <h1 class="oops">Oops! Page Not Found</h1>
     
-    <p>The requested page was not found. But here's something you could do:</p>
-    <p>{{ activity }}</p>
-</body>
-</html>
+    <p class="error404">The requested page was not found. But here's something you could do:</p>
+    <p class="activity">{{ activity }}</p>
+</main>
+{% endblock content %}
