@@ -17,5 +17,3 @@ urlpatterns = [
     path('topics/', views.topicpage, name="topics"),
     path('activities/', views.activitiespage, name="activity"),
 ]
-
-urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
