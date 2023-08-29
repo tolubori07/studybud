@@ -9,7 +9,7 @@ class User(AbstractUser):
     bio = models.CharField(max_length=200,null=True)
     avatar = models.ImageField(null=True, default = "images/avatar.svg")
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['username']
 # # Create your models here.
 class Topic(models.Model):
      name = models.CharField(max_length=200)
