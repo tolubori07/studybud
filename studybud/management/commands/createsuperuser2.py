@@ -44,7 +44,7 @@ class Command(createsuperuser.Command):
 
         if password:
             user = self.UserModel._default_manager.db_manager(database).get(
-                username=username
+                username=username,
                 email=email
             )
             user.set_password(password)
