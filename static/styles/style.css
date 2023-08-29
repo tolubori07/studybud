@@ -1206,3 +1206,8 @@ h1 {
   color: var(--color-light);
   font-family: comfortaa;
 }
+
+.logo{
+  height: 20%;
+  width: 20%;
+}
