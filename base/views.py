@@ -6,7 +6,7 @@ from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.forms import UserCreationForm
-from .models import Room,Topic,Message
+from.models import Room,Topic,Message
 from.forms import RoomForm, userform
 
 
@@ -23,7 +23,7 @@ def loginpage(request):
     if request.user.is_authenticated:
         return redirect('home')
     if request.method == 'POST':
-        username = request.POST.get('username').lower()
+        username = request.POST.get('username')
         password = request.POST.get('password')
 
         try:
@@ -36,7 +36,7 @@ def loginpage(request):
             login(request, user)
             return redirect ('home')
         else:
-            messages.error (request, 'Username OR password does not exist')
+             messages.error (request, 'Username OR password does not exist')
     context = {'page' :page }
     return render(request,'base/login_register.html', context)
 
@@ -65,16 +65,16 @@ def home(request):
         Q(topic__name__icontains = q) | 
         Q(name__icontains =q) 
         )
-    topics = Topic.objects.all()
+    topics = Topic.objects.all()[0:5]
     room_count = rooms.count()
     room_messages = Message.objects.filter(Q(room__topic__name__icontains =q))
-    search_results = search_string = request.GET.get('q', '')
+    search_string = request.GET.get('q', '')
     context = {'rooms': rooms, 'topics': topics, 'room_count': room_count, 'room_messages': room_messages, 'search_string': search_string,}
     return render(request, 'base/home.html', context)
 
 
 
-def room(request, pk):
+def room(request,pk):
     room = Room.objects.get(id=pk)
     room_messages = room.message_set.all()
     participants = room.participants.all()
@@ -181,3 +181,12 @@ def updateuser(request):
             form.save()
             return redirect('userprofile', pk = user.id)
     return render(request, 'base/update-user.html', {'form': form})
+
+def topicpage(request):
+    q = request.GET.get('q') if request.GET.get('q') != None else ''
+    topics = Topic.objects.filter(name__icontains = q)
+    return render(request , 'base/topics.html',{'topics': topics})
+
+def activitiespage(request):
+    room_messages = Message.objects.all()
+    return render(request,'base/activity.html',{'room_messages': room_messages})

@@ -1,7 +1,7 @@
 {% for room in rooms %}
 <div class="roomListRoom">
     <div class="roomListRoom__header">
-      <a href="{%url 'userprofile' room.host.id%}" class="roomListRoom__author">
+      <a href="{% url 'userprofile' room.host.id %}" class="roomListRoom__author">
         <div class="avatar avatar--small">
           <img src="https://randomuser.me/api/portraits/women/11.jpg" />
         </div>
@@ -16,7 +16,7 @@
       
     </div>
     <div class="roomListRoom__meta">
-      <a href="{%url 'room' room.id %} " class="roomListRoom__joined">
+      <a href="{%url 'room' room.id%} " class="roomListRoom__joined">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
           <title>user-group</title>
           <path
