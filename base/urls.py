@@ -16,8 +16,6 @@ urlpatterns = [
    path('update-user', views.updateuser, name="update-user"),
     path('topics/', views.topicpage, name="topics"),
     path('activities/', views.activitiespage, name="activity"),
-<<<<<<< HEAD
+
 ]
-=======
-]
->>>>>>> refs/remotes/origin/main
+

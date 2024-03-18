@@ -4,17 +4,11 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.contrib.auth import authenticate,login,logout
-<<<<<<< HEAD
-from django.contrib.auth.forms import UserCreationForm
-from.models import Room,Topic,Message
-from.forms import RoomForm, userform
-
-=======
 from.models import Room,Topic,Message,User
 from.forms import RoomForm, userform,Myusercreationform
 from .utils import get_random_activity
 from django.template import RequestContext
->>>>>>> refs/remotes/origin/main
+
 
 '''
 rooms = [
@@ -30,11 +24,8 @@ def loginpage(request):
     if request.user.is_authenticated:
         return redirect('home')
     if request.method == 'POST':
-<<<<<<< HEAD
         username = request.POST.get('username')
-=======
         email = request.POST.get('email')
->>>>>>> refs/remotes/origin/main
         password = request.POST.get('password')
 
         try:
@@ -47,11 +38,7 @@ def loginpage(request):
             login(request, user)
             return redirect ('home')
         else:
-<<<<<<< HEAD
-             messages.error (request, 'Username OR password does not exist')
-=======
              messages.error (request, 'email OR password does not exist')
->>>>>>> refs/remotes/origin/main
     context = {'page' :page }
     return render(request,'base/login_register.html', context)
 
@@ -88,11 +75,8 @@ def home(request):
     return render(request, 'base/home.html', context)
 
 
-<<<<<<< HEAD
 
-=======
 @login_required(login_url='login')
->>>>>>> refs/remotes/origin/main
 def room(request,pk):
     room = Room.objects.get(id=pk)
     room_messages = room.message_set.all()
@@ -207,12 +191,9 @@ def topicpage(request):
 
 def activitiespage(request):
     room_messages = Message.objects.all()
-<<<<<<< HEAD
-    return render(request,'base/activity.html',{'room_messages': room_messages})
-=======
     return render(request,'base/activity.html',{'room_messages': room_messages})
 
 def custom_404(request, exception):
     activity = get_random_activity()
     return render(request, '404.html', {'activity': activity}, status=404)
->>>>>>> refs/remotes/origin/main
+
