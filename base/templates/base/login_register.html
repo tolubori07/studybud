@@ -16,8 +16,13 @@
             <form class="form" action="" method="POST">
               {%csrf_token%}
               <div class="form__group form__group">
+<<<<<<< HEAD
                 <label for="room_name">Username</label>
                 <input id="username" name="username" type="text" placeholder="e.g. dennis_ivy" />
+=======
+                <label for="room_name">Email</label>
+                <input id="username" name="email" type="text" placeholder="e.g. dennis_ivy" />
+>>>>>>> refs/remotes/origin/main
               </div>
               <div class="form__group">
                 <label for="password">Password</label>
@@ -72,11 +77,19 @@
 {%csrf_token%}
 
 {%for field in form%}
+<<<<<<< HEAD
               <div class="form__group form__group">
                 <label for="room_name">{{field.label}}</label>
                 {{field}}
               </div>
               {%endfor%}
+=======
+                      <div class="form__group">
+                        <label for="room_name">{{field.label}}</label>
+                        {{field}}
+                      </div>
+{%endfor%}
+>>>>>>> refs/remotes/origin/main
               </div>
 
               <button class="btn btn--main" type="submit">
@@ -102,7 +115,11 @@
 
             <div class="auth__action">
               <p>Already signed up</p>
+<<<<<<< HEAD
               <a href="{%url 'login'%}" class="btn btn--link">Sign Up</a>
+=======
+              <a href="{%url 'login'%}" class="btn btn--link">Login</a>
+>>>>>>> refs/remotes/origin/main
             </div>
           </div>
         </div>

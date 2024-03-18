@@ -1,24 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 :root {
-  --color-main: #71c6dd;
+  --color-main: #302f30;
   --color-main-light: #e1f6fb;
-  --color-dark: #3f4156;
-  --color-dark-medium: #51546e;
-  --color-dark-light: #696d97;
-  --color-light: #e5e5e5;
+  --color-dark: #353838;
+  --color-dark-medium: rgb(93, 93, 91);
+  --color-dark-light: #a7a199;
+  --color-light: white;
   --color-gray: #8b8b8b;
-  --color-light-gray: #b2bdbd;
-  --color-bg: #2d2d39;
+  --color-light-gray: white;
+  --color-bg: #202122;
   --color-success: #5dd693;
   --color-error: #fc4b0b;
+  --color-prinary:  #81A4CD;
+}
+@font-face {
+  font-family: comfortaa;
+  src: url(Comfortaa-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: vcr osd mono;
+  src: url(VCR_OSD_MONO_1.001.ttf);
 }
 
 /*========== base styles ==========*/
 
 * {
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: comfortaa;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -30,7 +38,9 @@
 html {
   font-size: 56.25%;
 }
-
+.btn{
+  background-color: var(--color-prinary) !important;
+}
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 62.5%;
@@ -68,9 +78,18 @@ a {
   width: 90%;
   margin: auto;
 }
-
+h1 {
+  color: #696d97;
+  text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5,
+    -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5,
+    -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5,
+    -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+  color: #202c2d;
+  font-family: vcr osd mono;
+  font-size: 3em;
+}
 .btn {
-  background-color: transparent;
+  background-color: var(--color-prinary) !important;
   border: none;
   display: inline-flex;
   align-items: center;
@@ -88,6 +107,7 @@ a {
   padding: 0;
   color: var(--color-main);
   box-shadow: none;
+  background-color: var(--color-prinary);
 }
 
 .btn--link:hover {
@@ -95,8 +115,8 @@ a {
 }
 
 .btn--main {
-  background-color: var(--color-main);
-  color: var(--color-dark);
+  background-color: var(--color-prinary);
+  color: var(--color-light);
 }
 
 .btn:hover {
@@ -119,13 +139,13 @@ a {
   font-size: 1.4rem;
   font-weight: 700;
   padding: 6px 2.5rem;
-  color: var(--color-main);
-  background: transparent;
-  border: 2px solid var(--color-main);
+  color: var(--color-main-light);
+  background: var(--color-prinary);
+  border: 2px solid var(--color-prinary);
 }
 
 .action-button {
-  background: transparent;
+  background: var(--color-prinary);
   border: none;
   outline: none;
   cursor: pointer;
@@ -135,7 +155,7 @@ a {
   position: relative;
   display: inline-block;
   border-radius: 50%;
-  border: 2px solid var(--color-main);
+  border: 2px solid var(--color-prinary);
 }
 
 .avatar img {
@@ -213,7 +233,7 @@ a {
   position: absolute;
   top: 5rem;
   right: 0.5rem;
-  background: var(--color-dark-light);
+  background: var(--color-prinary);
   border-radius: 5px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -233,7 +253,7 @@ a {
 }
 
 .dropdown-menu a:hover {
-  background-color: var(--color-dark-medium);
+  background-color: var(--color-prinary);
 }
 
 .dropdown-menu > a:not(:last-child) {
@@ -268,6 +288,7 @@ a {
 .header {
   padding: 1.5rem;
   background-color: var(--color-dark);
+  font-size: large;
 }
 
 .header > .container {
@@ -294,7 +315,7 @@ a {
 }
 
 .header__search > label {
-  background-color: var(--color-dark-medium);
+  background-color: var(--color-gray);
   padding: 1.3rem 1rem;
   display: flex;
   align-items: center;
@@ -311,7 +332,7 @@ a {
 
 .header__search input {
   width: 30rem;
-  background: transparent;
+  background: var(--color-gray);
   border: none;
   outline: none;
   color: var(--color-light);
@@ -362,7 +383,7 @@ a {
 }
 
 .header__menu span {
-  color: var(--color-main);
+  color: var(--color-prinary);
   font-weight: 500;
   font-size: 1.4rem;
   display: block;
@@ -438,7 +459,7 @@ a {
 .layout__boxHeader {
   display: flex;
   padding: 1.5rem;
-  background-color: var(--color-dark-light);
+  background-color: var(--color-prinary);
 }
 
 .layout__boxTitle {
@@ -498,13 +519,16 @@ a {
 .form__group textarea,
 .form__group select {
   background: transparent;
-  border: 1px solid var(--color-dark-light);
+  border: 1px solid var(--color-prinary);
   padding: 1rem;
   border-radius: 3px;
   width: 100%;
   color: var(--color-light);
   font-weight: 500;
   outline: none;
+}
+.form__group a{
+  color: var(--color-main-light);
 }
 
 .form__group input:focus,
@@ -524,7 +548,7 @@ a {
 }
 
 .form__group select option {
-  background-color: var(--color-dark-light);
+  background-color: var(--color-prinary);
   color: var(--color-light);
   padding: 0 10rem;
 }
@@ -544,7 +568,7 @@ a {
   text-align: center;
   font-size: 1.8rem;
   font-weight: 500;
-  color: var(--color-main);
+  color: white;
   cursor: pointer;
 }
 
@@ -563,7 +587,7 @@ a {
 .topics__header h2 {
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--color-dark-light);
+  color: white;
 }
 
 .topics__list {
@@ -581,12 +605,12 @@ a {
 
 .topics__list li a.active,
 .topics__list li a:hover {
-  color: var(--color-main);
+  color: var(--color-main-light);
 }
 
 .topics__list li a span {
   padding: 0.5rem 1rem;
-  background-color: var(--color-dark);
+  background-color: var(--color-prinary);
   border-radius: 3px;
   font-size: 1.3rem;
   font-weight: 700;
@@ -624,6 +648,7 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2.4rem;
+  color: white;
 }
 
 .roomList__header h2 {
@@ -635,7 +660,7 @@ a {
 
 .roomList__header p {
   font-weight: 500;
-  color: var(--color-dark-light);
+  color: var(--color-light);
 }
 
 /*========== Room List Room ==========*/
@@ -658,6 +683,7 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: var(--color-main-light);
 }
 
 .roomListRoom__actions {
@@ -687,12 +713,12 @@ a {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
-  color: var(--color-light);
+  color: #cec3c3;
   transition: all 0.3s ease-in-out;
 }
 
 .roomListRoom__content a:hover {
-  color: var(--color-main);
+  color: white;
 }
 
 .roomListRoom__meta {
@@ -720,7 +746,7 @@ a {
 
 .roomListRoom__topic {
   padding: 5px 1.5rem;
-  background-color: var(--color-dark-medium);
+  background-color: var(--color-prinary);
   border-radius: 5rem;
   font-weight: 500;
   font-size: 1.3rem;
@@ -737,7 +763,7 @@ a {
 }
 
 .activities__header h2 {
-  background-color: var(--color-dark-light);
+  background-color: var(--color-prinary);
   text-transform: uppercase;
   font-weight: 500;
   padding: 1rem 1.5rem;
@@ -767,18 +793,22 @@ a {
 
 .activities__boxContent {
   margin-left: 4.2rem;
+  color: var(--color-main-light);
 }
 
 .activities__boxContent {
   font-size: 1.4rem;
+  color: var(--color-main-light);
 }
-
+.activities__boxContent a {
+  color: var(--color-main-light);
+}
 .activities__boxContent a:hover {
   text-decoration: underline;
 }
 
 .activities__boxRoomContent {
-  background: var(--color-bg);
+  background: var(--color-prinary);
   padding: 1rem;
   border-radius: 5px;
   margin-top: 1rem;
@@ -872,7 +902,7 @@ a {
 }
 
 .profile__info p {
-  color: var(--color-main);
+  color: var(--color-prinary);
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -883,7 +913,7 @@ a {
 
 .profile__about h3 {
   text-transform: uppercase;
-  color: var(--color-dark-light);
+  color: var(--color-main-light);
   margin-bottom: 0.5rem;
 }
 
@@ -892,7 +922,7 @@ a {
 }
 
 .profile-page .roomList__header h2 {
-  color: var(--color-dark-light);
+  color: var(--color-light);
 }
 
 /*==============================
@@ -906,6 +936,10 @@ a {
   border-radius: 0.7rem;
   overflow: hidden;
   position: relative;
+  color: var(--color-main-light);
+}
+.participants {
+  color: white;
 }
 
 @media screen and (max-width: 900px) {
@@ -920,7 +954,7 @@ a {
 
 .room__top,
 .participants__top {
-  background: var(--color-dark-light);
+  background: var(--color-main);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1009,12 +1043,12 @@ a {
 .room__info h3 {
   font-size: 2.4rem;
   font-weight: 500;
-  color: var(--color-main);
+  color: var(--color-main-light);
 }
 
 .room__hosted p {
   text-transform: uppercase;
-  color: var(--color-gray);
+  color: var(--color-light);
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 2;
@@ -1026,6 +1060,7 @@ a {
   align-items: center;
   margin-bottom: 1rem;
   transition: all 0.3s ease-in-out;
+  color: var(--color-light);
 }
 
 .room__author:hover {
@@ -1034,7 +1069,7 @@ a {
 
 .room__topics {
   padding: 0.5rem 1.5rem;
-  background: var(--color-dark-light);
+  background: var(--color-prinary);
   color: var(--color-light);
   display: inline-block;
   font-size: 1.4rem;
@@ -1064,7 +1099,7 @@ a {
 }
 
 .thread {
-  border-left: 2px solid var(--color-dark);
+  border-left: 2px solid var(--color-prinary);
   padding-left: 1rem;
   margin: 2rem 0;
   padding: 2rem;
@@ -1092,7 +1127,9 @@ a {
   align-items: center;
   gap: 1rem;
 }
-
+.thread__authorInfo span{
+  color: var(--color-prinary);
+}
 .thread__details {
   font-size: 1.4rem;
   margin-top: 0.5rem;
@@ -1110,7 +1147,7 @@ a {
 
 .room__message > form > input {
   resize: none;
-  background-color: var(--color-dark-light);
+  background-color: var(--color-main);
   color: var(--color-light);
   border: none;
   outline: none;
@@ -1129,7 +1166,7 @@ a {
 }
 
 .participants__top span {
-  color: var(--color-main);
+  color: var(--color-prinary);
   font-size: 1.3rem;
   text-transform: none;
 }
@@ -1161,6 +1198,17 @@ a {
 .participant span {
   display: block;
   font-weight: 500;
-  color: var(--color-main);
+  color: var(--color-prinary);
   font-weight: 1.4rem;
+}
+
+.main--404{
+  background-color: var(--color-bg);
+  color: var(--color-light);
+  font-family: comfortaa;
+}
+
+.logo{
+  height: 35%;
+  width: 35%;
 }
